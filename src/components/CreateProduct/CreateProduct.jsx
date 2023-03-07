@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import RangeBar from '../RangeBar/RangeBar';
 import style from './CreateProduct.module.scss'
 import axios from 'axios';
-const url = process.env.REACT_APP_API_URL;
+const url = 'https://cave88-api.onrender.com';
 
 //Component pour créer un product
 const CreateProduct =() => {

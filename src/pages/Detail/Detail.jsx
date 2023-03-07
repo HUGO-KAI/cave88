@@ -4,7 +4,7 @@ import axios from 'axios';
 import Rating from '../../components/Rating/Rating.jsx'
 import ModifyProduct from '../../components/ModifyProduct/ModifyProduct.jsx'
 import style from './Detail.module.scss';
-const url = process.env.REACT_APP_API_URL;
+const url = 'https://cave88-api.onrender.com';
 
 //La page Detail
 const Detail = () => {

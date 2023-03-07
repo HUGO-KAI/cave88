@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Filtre from '../../components/Filtre/Filtre.jsx';
 import Card from '../../components/Card/Card.jsx'
-const url = process.env.REACT_APP_API_URL;
+const url = 'https://cave88-api.onrender.com';
 
 
 //Page Promo
