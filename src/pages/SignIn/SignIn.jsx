@@ -11,7 +11,7 @@ const SignIn = () => {
         .then((res) => {
           if (res.status === 200) {
             sessionStorage.setItem("token", res.data.token);
-            window.location.href = "/Admin";
+            window.location.href = "./admin";
           }else { // fail to login
             window.alert('登录失败、');
             return;

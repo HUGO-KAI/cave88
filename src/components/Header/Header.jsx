@@ -13,7 +13,7 @@ const [online,setOnline] = useState()
 const handleClick = () => {
   sessionStorage.clear("token")
   setOnline(false);
-  window.location.href ='/Home';
+  window.location.href ='./home';
 }
 useEffect(()=>{
     if (!token) {
@@ -45,7 +45,7 @@ useEffect(()=>{
               <li><Link to="./">Accueil</Link></li>
               <li><Link to="./promo">Promo</Link></li>
             {!online?
-              <li><Link to="./signIn">Sign in</Link></li>:
+              <li><Link to="./signin">Sign in</Link></li>:
               <li className={style.signOut}><span onClick={handleClick}>Sign out</span></li>
             }  
             </ul>
