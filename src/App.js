@@ -24,11 +24,11 @@ function App() {
         <TopJumper />
           <Routes>
             <Route path='/' element={<Home />} />
-            <Route exact path='/home' element={<Home />} />
+            <Route path='/home' element={<Home />} />
             <Route path='/details/:id' element={<Detail/>} />
             <Route path='/promo' element={<Promo/>} />
             <Route path='/signin' element={<SignIn/>} />
-            <Route path='/Admin' element={<Admin/>} />
+            <Route path='/admin' element={<Admin/>} />
             <Route path='*' element={<NotFound/>} />
           </Routes>
       </Router>
