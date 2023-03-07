@@ -1,0 +1,158 @@
+/********/
+/*Header*/
+/********/
+$color-primaire: #ad0036;
+$color-secondaire: #ce134e;
+$text-color: #3d4c68;
+
+.limitedWidthBlockContainer {
+	display: flex;
+	justify-content: center;
+}
+
+.limitedWidthBlock {
+	max-width: 1400px;
+	box-sizing: border-box;
+	margin: auto;
+	width: 96%;
+	padding-right:25px;
+	display: flex;
+	justify-content: space-between;
+	@media (max-width: 575.98px) { 
+		flex-direction: column;
+		align-items: center;
+		padding: 0px;
+	}
+}
+
+/*informations*/
+a{
+	text-decoration: none;
+	color:white
+}
+
+.informations {
+	font-size: 13px;
+	background-color: $color-secondaire;
+}
+.informations img {
+	height: 17px;
+}
+.informations ul {
+	display: flex;
+	padding-left: 0;
+	@media (max-width: 575.98px) { 
+		flex-direction: column;
+		align-items: center;
+	}
+}
+.informations ul li {
+	display: flex;
+	list-style: none;
+	margin-right: 36px;
+	color:white;
+	
+	@media (max-width: 575.98px) { 
+		margin-bottom: 14px;
+		margin-right: 0;
+	}
+}
+.informations__phone {
+	padding-top: 3px;
+	margin-right: 10px;
+}
+.informations__address {
+	margin-right: 10px;
+}
+
+.logo {
+	height: 100px;
+	@media (max-width: 575.98px) { 
+		margin-top: 20px;
+	}
+}
+
+.menu{
+	display: flex;
+	justify-content: space-between;
+	background-color: white;
+	@media (max-width: 575.98px) {
+		flex-direction: column;
+		align-items: center;
+	}
+	nav {
+		display: flex;
+		float: right;
+		@media (max-width: 575.98px) { 
+			justify-content: space-around;
+		}
+		ul{
+			display: flex;
+			margin: 0;
+			line-height: 130px;
+			@media (max-width: 575.98px) {
+				padding: 0;
+				line-height: 80px;
+				a:first-child li {
+					margin-left: 0;
+				}
+			}
+			li{
+				list-style: none;
+				margin-left: 50px;
+				font-weight: 600;
+				color: $text-color;
+				a:hover {
+					font-weight: 600;
+					color: $color-primaire !important;
+				}
+				@media (max-width: 575.98px) {
+					margin:0px 25px;
+				}
+			}
+		} 
+	}
+	a {
+		color:black;
+		display: flex;
+		align-items: center;
+		text-decoration: none;
+	}
+	@media (max-width: 575.98px) { 
+		nav ul {
+			padding: 0;
+			line-height: 80px;
+		}
+	}
+}
+
+/*banniere*/
+.banniere {
+	width: 100%;
+	height: 300px;
+	object-fit: cover;
+	display: flex;
+}
+
+.signOut{
+	cursor: pointer;
+}
+
+@media (max-width: 991.98px) {
+	.informations ul {
+		display: flex;
+		justify-content: space-around;
+	}
+	.items a {
+		width: 42%;
+	}
+	.footerMain .limitedWidthBlock {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.footerSecondary .limitedWidthBlock p {
+		text-align: center;
+	}
+}
+

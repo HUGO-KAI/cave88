@@ -1,0 +1,79 @@
+@import "../../utils/variables.scss";
+
+.lineFiltre{
+    max-width: 1400px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    margin:20px auto;
+    padding: 0px 25px;
+    @media screen and (max-width:578px){
+        display: block;
+    }
+    span{
+        font-size: 15px;
+        font-weight:bold;
+        align-items: center;
+        text-align: center;
+        color:$text-color;
+        @media screen and (max-width:578px){
+            display: block;
+            margin: auto;
+        }
+    }
+}
+
+.filtre{
+    width: auto;
+    border: 1px solid $color-primaire;
+    border-left:none;
+    border-radius:40px;
+    width:max-content;
+    display: flex;
+    flex-direction: row;
+    padding: 0px 6px 0px 0px;
+    margin-left: 20px;
+    @media screen and (max-width:578px){
+        margin-left: 0px;
+    }
+    li{
+        list-style: none;
+        margin-right: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        font-weight: 500;
+        @media screen and (max-width:578px){
+            font-size: 12px;
+        }
+    }
+    li:first-of-type{
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        color:#0065FC;
+        background-color:$color-primaire;
+        
+    }
+    path{
+        color:white;
+    }
+    &:hover{
+        transform:scale(1.1);
+        cursor:pointer;
+    }
+}
+
+.filtreContainer{
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    @media screen and (max-width:578px){
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
+
+

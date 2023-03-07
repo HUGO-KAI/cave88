@@ -1,0 +1,16 @@
+.rangeBox{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0px 10px;
+  label{
+    margin-right: 10px;
+  }
+  input{
+    width: 60%;
+  }
+  span{
+    margin-left: 10px;
+  }
+}
+

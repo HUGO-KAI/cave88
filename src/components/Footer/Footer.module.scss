@@ -1,0 +1,43 @@
+@import "../../utils/variables.scss";
+
+
+.footerBlock {
+    max-width: 1400px;
+    box-sizing: border-box;
+    margin: auto;
+	color: white;
+	display: flex;
+	font-size: 14px;
+    justify-content: space-between;
+    padding-right:25px;
+    align-items: center;
+    
+}
+
+.footerMain {
+	background-color: $text-color;
+	padding: 50px 0;
+}
+
+.logo {
+	height: 100px;
+}
+
+@media screen and (max-width:578px) {
+    .footerBlock {
+        flex-direction: column;
+        justify-content: center;
+        padding-right:0px;
+        div{
+            p{
+                text-align: center;
+            }
+        }
+    }
+    
+}
+
+
+
+
+

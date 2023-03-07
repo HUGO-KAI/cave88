@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly react-test-renderer 1`] = `
+<div
+  className="logoFlotant"
+  onClick={[Function]}
+  title="Up"
+>
+  <img
+    alt="Cave88 阿发酒庄"
+    src="logoCave.jpg"
+  />
+</div>
+`;

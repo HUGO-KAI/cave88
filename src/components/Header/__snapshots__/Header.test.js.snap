@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly react-test-renderer 1`] = `
+<header>
+  <div
+    className="limitedWidthBlockContainer informations"
+  >
+    <div
+      className="limitedWidthBlock"
+    >
+      <ul>
+        <li>
+          <BsFillTelephoneFill
+            className="informations__phone"
+            size="14px"
+          />
+          01 23 45 67 89
+        </li>
+        <li>
+          <MdLocationOn
+            className="informations__address"
+            size="16px"
+          />
+          Aubervilliers
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div
+    className="limitedWidthBlockContainer menu"
+  >
+    <div
+      className="limitedWidthBlock"
+    >
+      <Link
+        to="./index.html"
+      >
+        <img
+          alt="Logo de l'entreprise"
+          className="logo"
+          src="logo.jpg"
+        />
+      </Link>
+      <nav>
+        <ul>
+          <Link
+            to="./index.html"
+          >
+            <li>
+              Accueil
+            </li>
+          </Link>
+          <Link
+            to="./promo.html"
+          >
+            <li>
+              Promo
+            </li>
+          </Link>
+          <Link
+            to="./signIn"
+          >
+            <li>
+              Sign in
+            </li>
+          </Link>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <img
+    alt="Baniere"
+    className="banniere"
+    src="banniere.webp"
+  />
+</header>
+`;
