@@ -109,7 +109,7 @@ const Detail = () => {
                 <button type='button' onClick={ToggleClass}>Modify/修改</button>
                 <button type='button' onClick={handleDelete}>Supprimer/删除</button>
               </div>
-              <ModifyProduct visible={visible} product={alcoolById} />
+              <ModifyProduct visible={visible} product={alcoolById} data = {handleModify}/>
             </div>
           </div>:""
         }

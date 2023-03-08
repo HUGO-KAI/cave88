@@ -52,7 +52,9 @@ const ModifyProduct =(props) => {
             });
             if (res.status === 200) {
                 window.alert('Modification enregistré! 红酒修改成功!');
-                window.location.reload(); 
+                axios.get(`${url}/api/product/${id}`)
+                .then((res) => props.data(res.data))
+                .catch(err => alert(err.message)); 
             }
           } catch (err) {
             console.log(err);
