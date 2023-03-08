@@ -18,7 +18,8 @@ const CreateProduct =() => {
     });
     const [image, setImage] = useState(null);
     const fromRef = useRef();
-
+    const navigate = useNavigate();
+    
     //Gérer le formulaire
     const handleChange = (dataType) => {
         return (e) => setState({...state,[dataType]: e.target.value});
@@ -47,7 +48,7 @@ const CreateProduct =() => {
             });
             if (res.status === 201) {
                 window.alert('Nouveau vins enregistré! 红酒创建成功!');
-                const navigate = useNavigate();
+                
                 navigate('/admin');
             }
           } catch (err) {
