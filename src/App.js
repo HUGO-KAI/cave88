@@ -24,7 +24,6 @@ function App() {
         <TopJumper />
           <Routes>
             <Route path='/' element={<Home />} />
-            <Route path='/home' element={<Home />} />
             <Route path='/details/:id' element={<Detail/>} />
             <Route path='/promo' element={<Promo/>} />
             <Route path='/signin' element={<SignIn/>} />

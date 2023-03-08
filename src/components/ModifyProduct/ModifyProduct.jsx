@@ -1,10 +1,9 @@
 import React, { useRef, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import RangeBar from '../RangeBar/RangeBar';
 import style from './ModifyProduct.module.scss'
 import axios from 'axios';
-const url = 'https://cave88-api.onrender.com';
-
+import '../../globalData';
+const url = global.api.url;
 
 //Component pour modifier un product
 const ModifyProduct =(props) => {
@@ -12,7 +11,6 @@ const ModifyProduct =(props) => {
     const id = productById._id;
     const visible = props.visible;
     const fromRef = useRef();
-    const navigate = useNavigate();
 
     //Initialiser le state
     const [state, setState] = useState({
@@ -54,7 +52,7 @@ const ModifyProduct =(props) => {
             });
             if (res.status === 200) {
                 window.alert('Modification enregistré! 红酒修改成功!');
-                navigate(`/details/${productById._id}`,{ replace: true });
+                window.location.reload(); 
             }
           } catch (err) {
             console.log(err);

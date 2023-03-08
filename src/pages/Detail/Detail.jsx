@@ -1,19 +1,19 @@
 import React, { useState, useEffect} from 'react';
-import { Navigate, useParams } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate , useParams } from 'react-router-dom';
 import axios from 'axios';
 import Rating from '../../components/Rating/Rating.jsx'
 import ModifyProduct from '../../components/ModifyProduct/ModifyProduct.jsx'
 import style from './Detail.module.scss';
-const url = 'https://cave88-api.onrender.com';
+import '../../globalData';
+const url = global.api.url;
 
 //La page Detail
 const Detail = () => {
+  const navigate = useNavigate();
   const { id } = useParams();
   const [alcool, setAlcools] = useState([]);
   const [visible,setVisible] = useState(false);
   const token = sessionStorage.getItem("token");
-  const navigate = useNavigate();
 
   //Rendre le formulaire modification visible ou invisible
   const ToggleClass = () => {
@@ -39,7 +39,7 @@ const Detail = () => {
         })
         if (res.status === 200) {
           window.alert('Objet supprimé!/已删除!');
-          navigate('/home', { replace: true });
+          navigate('/');
         }
         else {
           window.alert('Demande non autorisée/无权限!')
@@ -65,7 +65,7 @@ const Detail = () => {
   const alcoolById = alcool;
   // It's checking if the locationById variable is empty. If it is, it's redirecting to the 404 page. 
   if (!alcoolById) {
-    return <Navigate to='/404' />;
+    navigate('/404');
   }
 
   return (

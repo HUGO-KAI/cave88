@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { disableReactDevTools } from '@fvilers/disable-react-devtools';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './index.css';

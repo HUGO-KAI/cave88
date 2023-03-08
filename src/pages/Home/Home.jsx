@@ -2,7 +2,8 @@ import Filtre from "../../components/Filtre/Filtre.jsx"
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Card from '../../components/Card/Card.jsx';
-const url = 'https://cave88-api.onrender.com';
+import '../../globalData';
+const url = global.api.url;
 
 //La page Home
 const Home = () => {
