@@ -1,5 +1,6 @@
 import React, { useState, useEffect} from 'react';
 import { Navigate, useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Rating from '../../components/Rating/Rating.jsx'
 import ModifyProduct from '../../components/ModifyProduct/ModifyProduct.jsx'
@@ -12,6 +13,7 @@ const Detail = () => {
   const [alcool, setAlcools] = useState([]);
   const [visible,setVisible] = useState(false);
   const token = sessionStorage.getItem("token");
+  const navigate = useNavigate();
 
   //Rendre le formulaire modification visible ou invisible
   const ToggleClass = () => {
@@ -37,7 +39,7 @@ const Detail = () => {
         })
         if (res.status === 200) {
           window.alert('Objet supprimé!/已删除!');
-          <Navigate to='/home'/>;
+          navigate('/home');
         }
         else {
           window.alert('Demande non autorisée/无权限!')
