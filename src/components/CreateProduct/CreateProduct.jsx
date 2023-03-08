@@ -30,7 +30,7 @@ const CreateProduct =() => {
     }
 
     //Gérer submit du formulaire
-    const navigate = useNavigate();
+    
     const handleSubmit = async (e) => {
         e.preventDefault();
         const product = state;
@@ -47,6 +47,7 @@ const CreateProduct =() => {
             });
             if (res.status === 201) {
                 window.alert('Nouveau vins enregistré! 红酒创建成功!');
+                const navigate = useNavigate();
                 navigate('/admin');
             }
           } catch (err) {
