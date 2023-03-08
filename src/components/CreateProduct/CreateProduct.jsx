@@ -3,7 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import RangeBar from '../RangeBar/RangeBar';
 import style from './CreateProduct.module.scss'
 import axios from 'axios';
-const url = 'https://cave88-api.onrender.com';
+import '../../globalData';
+const url = global.api.url;
 
 //Component pour créer un product
 const CreateProduct =() => {
