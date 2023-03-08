@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import RangeBar from '../RangeBar/RangeBar';
 import style from './ModifyProduct.module.scss'
 import axios from 'axios';
-const url = process.env.REACT_APP_API_URL;
+const url = 'https://cave88-api.onrender.com';
 
 
 //Component pour modifier un product
