@@ -7,12 +7,14 @@ import banniere from '../../assets/banniere.webp'
 import { BsFillTelephoneFill } from "react-icons/bs";
 import {MdLocationOn} from "react-icons/md";
 
-const navigate = useNavigate();
+
 
 //Component Header
 function Header (props) {
 const token = sessionStorage.getItem("token");
+const navigate = useNavigate();
 const [online,setOnline] = useState()
+
 const handleClick = () => {
   sessionStorage.clear("token")
   setOnline(false);
