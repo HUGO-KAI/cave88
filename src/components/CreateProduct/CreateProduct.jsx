@@ -1,9 +1,9 @@
 import React, { useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import RangeBar from '../RangeBar/RangeBar';
 import style from './CreateProduct.module.scss'
 import axios from 'axios';
-import '../../globalData';
-const url = global.api.url;
+const url = 'https://cave88-api.onrender.com';
 
 //Component pour créer un product
 const CreateProduct =() => {
@@ -18,6 +18,7 @@ const CreateProduct =() => {
     });
     const [image, setImage] = useState(null);
     const fromRef = useRef();
+    const navigate = useNavigate();
 
     //Gérer le formulaire
     const handleChange = (dataType) => {
@@ -30,6 +31,7 @@ const CreateProduct =() => {
     }
 
     //Gérer submit du formulaire
+    
     const handleSubmit = async (e) => {
         e.preventDefault();
         const product = state;
@@ -46,7 +48,7 @@ const CreateProduct =() => {
             });
             if (res.status === 201) {
                 window.alert('Nouveau vins enregistré! 红酒创建成功!');
-                window.location.reload();
+                navigate('/admin');
             }
           } catch (err) {
             alert(err.message);
