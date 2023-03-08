@@ -27,6 +27,11 @@ const Detail = () => {
     .catch(err => alert(err.message));
   };
 
+  //refresh after midify
+  const handleModify = (data) =>{
+    setAlcools(data)
+  }
+
   //Demander la suppression d'un produit à backend
   const handleDelete = async () => {
     if (window.confirm('Voulez vous le supprimer?/确认删除吗?')) {
