@@ -1,10 +1,13 @@
 import React, {useEffect, useState}from "react";
+import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom'
 import style from './Header.module.scss'
 import logo from '../../assets/logo.jpg'
 import banniere from '../../assets/banniere.webp'
 import { BsFillTelephoneFill } from "react-icons/bs";
 import {MdLocationOn} from "react-icons/md";
+
+const navigate = useNavigate();
 
 //Component Header
 function Header (props) {
@@ -13,7 +16,7 @@ const [online,setOnline] = useState()
 const handleClick = () => {
   sessionStorage.clear("token")
   setOnline(false);
-  window.location.href ='./home';
+  navigate('./home');
 }
 useEffect(()=>{
     if (!token) {
