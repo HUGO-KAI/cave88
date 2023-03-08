@@ -54,7 +54,7 @@ const ModifyProduct =(props) => {
             });
             if (res.status === 200) {
                 window.alert('Modification enregistré! 红酒修改成功!');
-                navigate(`/details/${productById._id}`);
+                navigate(`/details/${productById._id}`,{ replace: true });
             }
           } catch (err) {
             console.log(err);
