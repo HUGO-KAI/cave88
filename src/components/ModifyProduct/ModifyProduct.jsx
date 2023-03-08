@@ -1,8 +1,10 @@
 import React, { useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import RangeBar from '../RangeBar/RangeBar';
 import style from './ModifyProduct.module.scss'
 import axios from 'axios';
 const url = process.env.REACT_APP_API_URL;
+const navigate = useNavigate();
 
 //Component pour modifier un product
 const ModifyProduct =(props) => {
@@ -51,7 +53,7 @@ const ModifyProduct =(props) => {
             });
             if (res.status === 200) {
                 window.alert('Modification enregistré! 红酒修改成功!');
-                window.location.href = `/details/${productById._id}`;
+                navigate(`/details/${productById._id}`);
             }
           } catch (err) {
             console.log(err);
