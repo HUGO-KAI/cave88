@@ -39,7 +39,7 @@ const Detail = () => {
         })
         if (res.status === 200) {
           window.alert('Objet supprimé!/已删除!');
-          navigate('/home');
+          navigate('/home', { replace: true });
         }
         else {
           window.alert('Demande non autorisée/无权限!')
