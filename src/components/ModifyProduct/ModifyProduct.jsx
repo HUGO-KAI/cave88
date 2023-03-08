@@ -4,7 +4,7 @@ import RangeBar from '../RangeBar/RangeBar';
 import style from './ModifyProduct.module.scss'
 import axios from 'axios';
 const url = process.env.REACT_APP_API_URL;
-const navigate = useNavigate();
+
 
 //Component pour modifier un product
 const ModifyProduct =(props) => {
@@ -12,6 +12,7 @@ const ModifyProduct =(props) => {
     const id = productById._id;
     const visible = props.visible;
     const fromRef = useRef();
+    const navigate = useNavigate();
 
     //Initialiser le state
     const [state, setState] = useState({
