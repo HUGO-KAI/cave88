@@ -29,6 +29,8 @@ const CreateProduct =() => {
     //Gérer l'image
     const onChangeImage = (e) => {
         setImage(e.target.files[0]);
+        let fileSize = parseInt(e.target.files[0].size/1000);
+        fromRef.current.innerHTML = `文件大小${fileSize}k -(不能大于1000k)`;
     }
 
     //Gérer submit du formulaire
@@ -75,9 +77,9 @@ const CreateProduct =() => {
                 <label htmlFor="description">口感</label>
                 <textarea name="description" id="description" className={style.description} rows="5" onChange={handleChange("description")} ></textarea>
             </div>
-            <div className={style.container}>
+            <div className={style.containerImg}>
                 <input name="file" ref={fromRef} type="file" accept="image/gif,image/jpeg,image/jpg,image/png,image/webp" onChange={onChangeImage}/>
-                <img src="" alt="" style={{maxHeight: 100+'px', display:'block',marginTop:10+'px'}} />
+                <p ref={fromRef}></p>
             </div>
             <div className={style.container}>
                 <label htmlFor="prix">价格</label>
