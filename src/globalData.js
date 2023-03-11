@@ -1,3 +1,3 @@
 global.api = {
-    url:'https://cave88-api.onrender.com'
+    url:'http://cave88api-env-1.eba-biy3mymw.eu-west-3.elasticbeanstalk.com/'
 };
