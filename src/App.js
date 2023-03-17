@@ -14,7 +14,7 @@ const telephone = '0642888868';
 const city = 'Aubervilliers';
 const adr = '3 Rue des Gardinoux';
 const ville = '93300 Aubervilliers';
-const mail = 'cave88@gmail.com';
+const mail = 'cave88vip@gmail.com';
 
 function App() {
   return (
