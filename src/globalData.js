@@ -1,3 +1,3 @@
 global.api = {
-    url:'https://cave88-api.onrender.com'
+    url:'https://stingray-app-mj5xt.ondigitalocean.app'
 };
