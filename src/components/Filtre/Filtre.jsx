@@ -45,11 +45,11 @@ function Filtre (props) {
 
     return (
         <div className ={style.lineFiltre}>
-            <span>Filtres/优选</span>
+            <span>Filtres/点击优选</span>
             <div className = {style.filtreContainer}>
             <ul className ={style.filtre} onClick={priceSorted}>
                 <li><FaEuroSign size="14px" /></li>
-                <li>Prix / 价格</li>
+                <li>Prix / 价格优先</li>
             </ul>
             <ul className = {style.filtre} onClick={ratingSorted}>
                 <li><FaThumbsUp size="14px" /></li>
