@@ -30,6 +30,7 @@ class Card extends React.Component{
                                     {alcool.prix_offre?
                                     <p className={style.prxiAnnuler}>{alcool.prix}€</p>:
                                     <p className={style.prix}>{alcool.prix}€</p>}
+                                    <p className={style.plusDeDetail}>Plus de détail...</p>
                                 </div>
                                 </article>
                             </Link>
