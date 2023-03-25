@@ -2,9 +2,10 @@ import React, {useEffect, useState}from "react";
 import { Link, useNavigate } from 'react-router-dom'
 import style from './Header.module.scss'
 import logo from '../../assets/logo.jpg'
-import banniere from '../../assets/banniere.webp'
+//import banniere from '../../assets/banniere.webp'
 import { BsFillTelephoneFill } from "react-icons/bs";
 import {MdLocationOn} from "react-icons/md";
+import Slideshow from "../Slideshow/Slideshow"
 
 //Component Header
 function Header (props) {
@@ -53,7 +54,10 @@ function Header (props) {
           </nav>
         </div>
       </div>
-      <img className= {style.banniere} src= {banniere} alt="Baniere" />
+      {
+        /*<img className= {style.banniere} src= {banniere} alt="Baniere" />*/
+      }
+      <Slideshow />
     </header>
   )
 }
