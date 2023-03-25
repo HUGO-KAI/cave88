@@ -1,6 +1,7 @@
 import React from "react";
-import logo from '../../assets/logo-rond.png'
-import style from './Footer.module.scss'
+import logo from '../../assets/logo-rond.png';
+import style from './Footer.module.scss';
+import { Link} from 'react-router-dom'
 
 //Components Footer
 function Footer (props) {
@@ -20,6 +21,7 @@ function Footer (props) {
                 <div>
                     <p>Email : <a href = {"mailto:"+props.mail}>{props.mail}</a></p>
                 </div>
+                <Link to="./mention">Mention légale</Link>
             </div>
         </div>
     </footer>

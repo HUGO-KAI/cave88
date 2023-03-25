@@ -9,6 +9,7 @@ import NotFound from './pages/NotFound/NotFound'
 import Promo from './pages/Promo/Promo'
 import SignIn from './pages/SignIn/SignIn'
 import Admin from './pages/Admin/Admin'
+import Mention from './pages/Mention/Mention'
 
 const telephone = '0642888868';
 const city = 'Aubervilliers';
@@ -28,10 +29,11 @@ function App() {
             <Route path='/promo' element={<Promo/>} />
             <Route path='/signin' element={<SignIn/>} />
             <Route path='/admin' element={<Admin/>} />
+            <Route path='/mention' element={<Mention/>} />
             <Route path='*' element={<NotFound/>} />
           </Routes>
+          <Footer tel= {telephone} adr={adr} ville={ville} mail= {mail}/>
       </Router>
-      <Footer tel= {telephone} adr={adr} ville={ville} mail= {mail}/>
     </Fragment>
   );
 }
