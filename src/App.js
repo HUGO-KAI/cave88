@@ -19,22 +19,22 @@ const mail = 'cave88vip@gmail.com';
 
 function App() {
   return (
-    <Fragment>
+    <div>
       <Router>
         <Header tel= {telephone} city = {city}/>
         <TopJumper />
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/details/:id' element={<Detail/>} />
-            <Route path='/promo' element={<Promo/>} />
-            <Route path='/signin' element={<SignIn/>} />
-            <Route path='/admin' element={<Admin/>} />
-            <Route path='/mention' element={<Mention/>} />
-            <Route path='*' element={<NotFound/>} />
-          </Routes>
-          <Footer tel= {telephone} adr={adr} ville={ville} mail= {mail}/>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/details/:id' element={<Detail/>} />
+          <Route path='/promo' element={<Promo/>} />
+          <Route path='/signin' element={<SignIn/>} />
+          <Route path='/admin' element={<Admin/>} />
+          <Route path='/mention' element={<Mention/>} />
+          <Route path='*' element={<NotFound/>} />
+        </Routes>
+        <Footer tel= {telephone} adr={adr} ville={ville} mail= {mail}/>
       </Router>
-    </Fragment>
+    </div>
   );
 }
 
