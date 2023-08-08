@@ -1,12 +1,30 @@
-import TestRenderer from 'react-test-renderer';
-import ShallowRenderer from 'react-test-renderer/shallow';
-import Header from './Header'
+import {render, screen, cleanup} from "@testing-library/react";
+import renderer from 'react-test-renderer'
+import {BrowserRouter} from "react-router-dom"
+import Header from "./Header";
 
+afterEach (() => {
+    cleanup()
+}); 
 
-//Basic Test with React-test-renderer
-it('renders correctly react-test-renderer', () => {
-const renderer = new ShallowRenderer();
-renderer.render(<Header />);
-const result = renderer.getRenderOutput();
-expect(result).toMatchSnapshot();
-});
+test('should render Header component',()=>{
+    render(
+        //Utilise BrowerRouter pour enable useNavigate() hook
+        <BrowserRouter>
+            <Header/>
+        </BrowserRouter>
+    );
+    const HeaderElement = screen.getByTestId('Header-1');
+    expect(HeaderElement).toBeInTheDocument();
+    expect(HeaderElement).toHaveTextContent('Accueil','Promo')
+})
+
+test('maches snapshot', ()=> {
+    const telephone = '0642888868';
+    const city = 'Aubervilliers';
+    const tree = renderer.create(
+        <BrowserRouter>
+            <Header tel= {telephone} city = {city}/>
+        </BrowserRouter>).toJSON();
+    expect(tree).toMatchSnapshot();
+})

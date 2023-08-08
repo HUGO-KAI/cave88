@@ -25,7 +25,7 @@ function Header (props) {
       }
   },[token])
   return (
-    <header>
+    <header data-testid='Header-1'>
       <div className ={`${style.limitedWidthBlockContainer} ${style.informations}`} >
         <div className = {style.limitedWidthBlock}>
           <ul>

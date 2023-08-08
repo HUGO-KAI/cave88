@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly react-test-renderer 1`] = `
-<header>
+exports[`maches snapshot 1`] = `
+<header
+  data-testid="Header-1"
+>
   <div
     className="limitedWidthBlockContainer informations"
   >
@@ -10,17 +12,56 @@ exports[`renders correctly react-test-renderer 1`] = `
     >
       <ul>
         <li>
-          <BsFillTelephoneFill
+          <svg
             className="informations__phone"
-            size="14px"
-          />
-          01 23 45 67 89
+            fill="currentColor"
+            height="14px"
+            stroke="currentColor"
+            strokeWidth="0"
+            style={
+              Object {
+                "color": undefined,
+              }
+            }
+            viewBox="0 0 16 16"
+            width="14px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"
+              fillRule="evenodd"
+            />
+          </svg>
+          <a
+            href="tel:0642888868"
+          >
+            0642888868
+          </a>
         </li>
         <li>
-          <MdLocationOn
+          <svg
             className="informations__address"
-            size="16px"
-          />
+            fill="currentColor"
+            height="16px"
+            stroke="currentColor"
+            strokeWidth="0"
+            style={
+              Object {
+                "color": undefined,
+              }
+            }
+            viewBox="0 0 24 24"
+            width="16px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 0h24v24H0z"
+              fill="none"
+            />
+            <path
+              d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"
+            />
+          </svg>
           Aubervilliers
         </li>
       </ul>
@@ -32,46 +73,285 @@ exports[`renders correctly react-test-renderer 1`] = `
     <div
       className="limitedWidthBlock"
     >
-      <Link
-        to="./index.html"
+      <a
+        href="/"
+        onClick={[Function]}
       >
         <img
           alt="Logo de l'entreprise"
           className="logo"
           src="logo.jpg"
         />
-      </Link>
+      </a>
       <nav>
         <ul>
-          <Link
-            to="./index.html"
-          >
-            <li>
+          <li>
+            <a
+              href="/"
+              onClick={[Function]}
+            >
               Accueil
-            </li>
-          </Link>
-          <Link
-            to="./promo.html"
-          >
-            <li>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/promo"
+              onClick={[Function]}
+            >
               Promo
-            </li>
-          </Link>
-          <Link
-            to="./signIn"
-          >
-            <li>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/signIn"
+              onClick={[Function]}
+            >
               Sign in
-            </li>
-          </Link>
+            </a>
+          </li>
         </ul>
       </nav>
     </div>
   </div>
-  <img
-    alt="Baniere"
-    className="banniere"
-    src="banniere.webp"
-  />
+  <div
+    className="slide-container"
+  >
+    <div
+      aria-roledescription="carousel"
+      dir="ltr"
+    >
+      <div
+        className="react-slideshow-container"
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseMove={[Function]}
+        onMouseOver={[Function]}
+        onMouseUp={[Function]}
+        onTouchCancel={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+      >
+        <button
+          aria-label="Previous Slide"
+          className="nav default-nav "
+          data-type="prev"
+          disabled={false}
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+          >
+            <path
+              d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z"
+            />
+          </svg>
+        </button>
+        <div
+          className="react-slideshow-wrapper slide "
+        >
+          <div
+            className="images-wrap"
+            style={
+              Object {
+                "transform": "translate(-0px)",
+              }
+            }
+          >
+            <div
+              aria-hidden="true"
+              aria-roledescription="slide"
+              data-index={-1}
+            >
+              <div>
+                <div
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "backgroundImage": "url(https://cdn.pixabay.com/photo/2015/03/08/22/34/wine-664826_960_720.jpg)",
+                      "backgroundSize": "cover",
+                      "display": "flex",
+                      "height": "400px",
+                      "justifyContent": "center",
+                    }
+                  }
+                >
+                  <span
+                    style={
+                      Object {
+                        "background": "rgb(173 0 54 / 0.5)",
+                        "color": "white",
+                        "fontWeight": "bold",
+                        "padding": "20px",
+                      }
+                    }
+                  >
+                    整箱优惠-Hard discount
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden="false"
+              aria-roledescription="slide"
+              className="active"
+              data-index={0}
+            >
+              <div>
+                <div
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "backgroundImage": "url(https://cdn.pixabay.com/photo/2016/10/22/20/34/wines-1761613_1280.jpg)",
+                      "backgroundSize": "cover",
+                      "display": "flex",
+                      "height": "400px",
+                      "justifyContent": "center",
+                    }
+                  }
+                >
+                  <span
+                    style={
+                      Object {
+                        "background": "rgb(173 0 54 / 0.5)",
+                        "color": "white",
+                        "fontWeight": "bold",
+                        "padding": "20px",
+                      }
+                    }
+                  >
+                    阿发酒庄-cave88vip
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden="true"
+              aria-roledescription="slide"
+              className=""
+              data-index={1}
+            >
+              <div>
+                <div
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "backgroundImage": "url(https://cdn.pixabay.com/photo/2015/03/08/22/35/wine-664832_960_720.jpg)",
+                      "backgroundSize": "cover",
+                      "display": "flex",
+                      "height": "400px",
+                      "justifyContent": "center",
+                    }
+                  }
+                >
+                  <span
+                    style={
+                      Object {
+                        "background": "rgb(173 0 54 / 0.5)",
+                        "color": "white",
+                        "fontWeight": "bold",
+                        "padding": "20px",
+                      }
+                    }
+                  >
+                    批发零售-Prix grossiste
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden="true"
+              aria-roledescription="slide"
+              className=""
+              data-index={2}
+            >
+              <div>
+                <div
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "backgroundImage": "url(https://cdn.pixabay.com/photo/2015/03/08/22/34/wine-664826_960_720.jpg)",
+                      "backgroundSize": "cover",
+                      "display": "flex",
+                      "height": "400px",
+                      "justifyContent": "center",
+                    }
+                  }
+                >
+                  <span
+                    style={
+                      Object {
+                        "background": "rgb(173 0 54 / 0.5)",
+                        "color": "white",
+                        "fontWeight": "bold",
+                        "padding": "20px",
+                      }
+                    }
+                  >
+                    整箱优惠-Hard discount
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden="true"
+              aria-roledescription="slide"
+              data-index={3}
+            >
+              <div>
+                <div
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "backgroundImage": "url(https://cdn.pixabay.com/photo/2016/10/22/20/34/wines-1761613_1280.jpg)",
+                      "backgroundSize": "cover",
+                      "display": "flex",
+                      "height": "400px",
+                      "justifyContent": "center",
+                    }
+                  }
+                >
+                  <span
+                    style={
+                      Object {
+                        "background": "rgb(173 0 54 / 0.5)",
+                        "color": "white",
+                        "fontWeight": "bold",
+                        "padding": "20px",
+                      }
+                    }
+                  >
+                    阿发酒庄-cave88vip
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          aria-label="Next Slide"
+          className="nav default-nav "
+          data-type="next"
+          disabled={false}
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+          >
+            <path
+              d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
 </header>
 `;
