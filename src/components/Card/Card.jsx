@@ -13,7 +13,7 @@ class Card extends React.Component{
                         <section className={style.cards}>
                         {alcools &&
                             alcools.map((alcool) => (
-                            <Link key={alcool._id} to={`/details/${alcool._id}`}>
+                            <Link key={alcool._id} to={`/details/${alcool._id}`} data-testid={`Card-${alcool._id}`}>
                                 <article>
                                 <img src={alcool.imageUrl} alt='nos vins' />
                                 <div>
