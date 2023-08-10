@@ -1,7 +1,6 @@
 import {render, screen, cleanup} from "@testing-library/react";
 import React from 'react'
-import renderer from 'react-test-renderer'
-import {BrowserRouter,useLocation} from "react-router-dom"
+import {BrowserRouter} from "react-router-dom"
 import Card from "./Card";
 
 afterEach (() => {
