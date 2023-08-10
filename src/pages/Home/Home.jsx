@@ -2,6 +2,8 @@ import Filtre from "../../components/Filtre/Filtre.jsx"
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Card from '../../components/Card/Card.jsx';
+
+import style from './Home.module.scss'
 import '../../globalData';
 const url = global.api.url;
 
@@ -33,8 +35,12 @@ const Home = () => {
 
   return (
     <div>
-    <Filtre vins = {alcools} resultsSortPrice={priceSorted} resultsSortRating={ratingSorted}/>
-    <Card alcools = {[...alcools]}/>    
+      <div className={style.titles}>
+        <h1>Notre carte</h1>
+        <h2>Une grande variété d'alcools</h2>
+      </div>
+      <Filtre vins = {alcools} resultsSortPrice={priceSorted} resultsSortRating={ratingSorted}/>
+      <Card alcools = {[...alcools]}/>    
     </div>
   );
 };

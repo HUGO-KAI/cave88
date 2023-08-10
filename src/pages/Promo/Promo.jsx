@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Filtre from '../../components/Filtre/Filtre.jsx';
 import Card from '../../components/Card/Card.jsx'
+import style from './Promo.module.scss';
 import '../../globalData';
 const url = global.api.url;
 
@@ -37,8 +38,11 @@ const Promo = () => {
 
   return (
     <div>
-    <Filtre vins = {alcools} resultsSortPrice={priceSorted} resultsSortRating={ratingSorted}/>
-    <Card alcools = {[...alcools]}/>    
+      <div className={style.titles}>
+        <h1>Nos vins en promo</h1>
+      </div>
+      <Filtre vins = {alcools} resultsSortPrice={priceSorted} resultsSortRating={ratingSorted}/>
+      <Card alcools = {[...alcools]}/>    
     </div>
   );
 };

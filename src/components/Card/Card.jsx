@@ -10,10 +10,6 @@ class Card extends React.Component{
             return (
                 <main className={style.limitedWidthBlockContainer}>
                     <div className={style.limitedWidthBlock}>
-                        <div className={style.titles}>
-                        <h1>Notre carte</h1>
-                        <h2>Une grande variété d'alcools</h2>
-                        </div>
                         <section className={style.cards}>
                         {alcools &&
                             alcools.map((alcool) => (
